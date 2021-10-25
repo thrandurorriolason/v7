@@ -18,16 +18,19 @@ let losses = 0;
  * @return {boolean} true eða false
  */
 function isValidBestOf(bestOf) {
-  // TODO útfæra
+  if (bestOf % 2 === 0) {
+    return false;
+  }
+  else{
+    return true;
+  }
 }
 console.assert(isValidBestOf(1) === true, '1 er valid best of');
 console.assert(isValidBestOf(2) === false, '2 er ekki er valid best of');
 console.assert(isValidBestOf(9) === true, '9 er valid best of');
 
 function playAsText(play) {
-  if (bestOf === 1){
-      return true;
-  }
+  // TODO útfæra
 }
 console.assert(playAsText('1') === 'Skæri', '1 táknar skæri');
 console.assert(playAsText('2') === 'Blað', '2 táknar blað');
