@@ -30,7 +30,19 @@ console.assert(isValidBestOf(2) === false, '2 er ekki er valid best of');
 console.assert(isValidBestOf(9) === true, '9 er valid best of');
 
 function playAsText(play) {
-  // TODO útfæra
+  
+  if (play === "1"){
+    return "Skæri";
+  }
+  else if (play === "2"){
+    return "Blað";
+  }
+  else if (play === "3"){
+    return 'Steinn';
+  }
+  else {
+    return console.error("Óþekkt");
+  }
 }
 console.assert(playAsText('1') === 'Skæri', '1 táknar skæri');
 console.assert(playAsText('2') === 'Blað', '2 táknar blað');
@@ -44,7 +56,21 @@ console.assert(playAsText('foo') === 'Óþekkt', 'Annað er óþekkt');
  * @returns -1 ef tölva vann, 0 ef jafntefli, 1 ef spilari vann
  */
 function checkGame(player, computer) {
-  // TODO útfæra
+  if (player == 1 && computer == 2){
+    return "Skæri vinnur blað";
+  }
+  else if (player == 2 && computer == 3){
+    return "Blað vinnur stein";
+  }
+  else if (player == 3 && computer == 1){
+    return "Steinn vinnur skæri";
+  }
+  else if (player == 1 && computer == 1){
+    return "Skæri og skæri eru jafntefli";
+  }
+  else if (player == 1 && computer == 3){
+    return "Skæri tapar fyrir stein";
+  }
 }
 console.assert(checkGame('1', '2') === 1, 'Skæri vinnur blað');
 console.assert(checkGame('2', '3') === 1, 'Blað vinnur stein');
@@ -76,7 +102,15 @@ function play() {
   // 2. Staðfesta að fjöldi leikja sé gilt gildi
   // 3. Keyra fjölda leikja og spila umferð þar til sigurvegari er krýndur
   // 4. Birta hvort spilari eða tölva vann
-  1+1
+  bestOf = parseInt(bestOf);
+  var bestOf = prompt("Hvað viltu spila marga leiki?: ")
+  isValidBestOf(bestOf);
+  
+  
+  
+  var play = prompt("Hverju viltu spila?: ")
+  complay = 2;
+  checkGame(play, complay);
 }
 // Hér getum við ekki skrifað test þar sem fallið mun biðja notanda um inntak!
 
