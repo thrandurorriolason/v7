@@ -1,16 +1,18 @@
 {
-    "name": "vef1-2021-v7",
-    "version": "1.0.0",
-    "scripts": {
-      "dev": "browser-sync start --server --files scripts.js index.html",
-      "sass-build": "sass styles.scss ./build/styles.css",
-      "copy": "cpy ./*.html ./build/",
-      "build": "concurrently npm:sass-build npm:copy"
-    },
-    "keywords": [],
-    "author": "",
-    "license": "ISC",
-    "devDependencies": {
-      "browser-sync": "^2.27.5"
-    }
+  "name": "vef1-2021-v7",
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "browser-sync start --server --files scripts.js index.html",
+    "sass-build": "sass styles.scss ./build/styles.css",
+    "copy": "cpy ./*.html ./build/",
+    "build": "concurrently npm:sass-build npm:copy"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^2.27.5",
+    "concurrently": "^6.2.2",
+    "cpy-cli": "^1.0.1"
   }
+}
